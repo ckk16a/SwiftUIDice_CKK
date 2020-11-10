@@ -13,6 +13,11 @@
 		61E1E588255AD920008FEE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61E1E587255AD920008FEE19 /* Assets.xcassets */; };
 		61E1E58B255AD920008FEE19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61E1E58A255AD920008FEE19 /* Preview Assets.xcassets */; };
 		61E1E58E255AD920008FEE19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E1E58C255AD920008FEE19 /* LaunchScreen.storyboard */; };
+		61E1E59E255ADC20008FEE19 /* diceroll.wav in Resources */ = {isa = PBXBuildFile; fileRef = 61E1E59B255ADC20008FEE19 /* diceroll.wav */; };
+		61E1E59F255ADC20008FEE19 /* criticalmiss.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 61E1E59C255ADC20008FEE19 /* criticalmiss.mp3 */; };
+		61E1E5A0255ADC20008FEE19 /* criticalhit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 61E1E59D255ADC20008FEE19 /* criticalhit.mp3 */; };
+		61E1E5A3255ADC80008FEE19 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E1E5A2255ADC80008FEE19 /* PlaySound.swift */; };
+		61E1E5A6255AE793008FEE19 /* ShakeGestureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E1E5A5255AE793008FEE19 /* ShakeGestureManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		61E1E58A255AD920008FEE19 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		61E1E58D255AD920008FEE19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61E1E58F255AD920008FEE19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61E1E59B255ADC20008FEE19 /* diceroll.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = diceroll.wav; sourceTree = "<group>"; };
+		61E1E59C255ADC20008FEE19 /* criticalmiss.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = criticalmiss.mp3; sourceTree = "<group>"; };
+		61E1E59D255ADC20008FEE19 /* criticalhit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = criticalhit.mp3; sourceTree = "<group>"; };
+		61E1E5A2255ADC80008FEE19 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
+		61E1E5A5255AE793008FEE19 /* ShakeGestureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeGestureManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +66,12 @@
 		61E1E580255AD91F008FEE19 /* SwiftUiDice */ = {
 			isa = PBXGroup;
 			children = (
+				61E1E59A255ADC12008FEE19 /* Sounds */,
 				61E1E581255AD91F008FEE19 /* AppDelegate.swift */,
 				61E1E583255AD91F008FEE19 /* SceneDelegate.swift */,
 				61E1E585255AD91F008FEE19 /* ContentView.swift */,
+				61E1E5A5255AE793008FEE19 /* ShakeGestureManager.swift */,
+				61E1E5A2255ADC80008FEE19 /* PlaySound.swift */,
 				61E1E587255AD920008FEE19 /* Assets.xcassets */,
 				61E1E58C255AD920008FEE19 /* LaunchScreen.storyboard */,
 				61E1E58F255AD920008FEE19 /* Info.plist */,
@@ -73,6 +86,16 @@
 				61E1E58A255AD920008FEE19 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		61E1E59A255ADC12008FEE19 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				61E1E59D255ADC20008FEE19 /* criticalhit.mp3 */,
+				61E1E59C255ADC20008FEE19 /* criticalmiss.mp3 */,
+				61E1E59B255ADC20008FEE19 /* diceroll.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +157,10 @@
 			files = (
 				61E1E58E255AD920008FEE19 /* LaunchScreen.storyboard in Resources */,
 				61E1E58B255AD920008FEE19 /* Preview Assets.xcassets in Resources */,
+				61E1E59F255ADC20008FEE19 /* criticalmiss.mp3 in Resources */,
+				61E1E59E255ADC20008FEE19 /* diceroll.wav in Resources */,
 				61E1E588255AD920008FEE19 /* Assets.xcassets in Resources */,
+				61E1E5A0255ADC20008FEE19 /* criticalhit.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,8 +172,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				61E1E582255AD91F008FEE19 /* AppDelegate.swift in Sources */,
+				61E1E5A3255ADC80008FEE19 /* PlaySound.swift in Sources */,
 				61E1E584255AD91F008FEE19 /* SceneDelegate.swift in Sources */,
 				61E1E586255AD91F008FEE19 /* ContentView.swift in Sources */,
+				61E1E5A6255AE793008FEE19 /* ShakeGestureManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
